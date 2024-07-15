@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Sorting Visualizer</title>
+</head>
+
+<body>
+  <div class="nav-container">
+    <h1 class="title">
+      Sorting Visualizer
+    </h1>
+  <div id = "complexity">
+    <h2 style="color: white; font-size: 2em; font-weight: 500;">Complexity</h2>
+    <table class="table table-primary mar">
+      <tr>
+        <th>Best</th>
+        <th>Average</th>
+        <th>Worst</th>
+        <th>Memory</th>
+      </tr>
+      <tr>
+        <th id="best">NA</th>
+        <th id="average">NA</th>
+        <th id="worst">NA</th>
+        <th id="memory">NA</th>
+      </tr>
+    </table>
+  </div>
+    <div class="navbar1" id="navbar1">
+      <a id="random" onclick="RenderScreen()">Generate array</a>
+      <span class="options">
+        <select name="select sort algorithm" id="menu" class="algo-menu">
+          <option value="0">Choose algorithm</option>
+          <option value="1">Bubble Sort</option>
+          <option value="2">Selection Sort</option>
+          <option value="3">Insertion Sort</option>
+          <option value="4">Merge Sort</option>
+          <option value="5">Quick Sort</option>
+        </select>
+      </span>
+      <span class="options">
+        <select name="select array size" id="menu" class="size-menu">
+          <option value="0">Array size</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+          <option value="90">90</option>
+          <option value="100">100</option>
+        </select>
+      </span>
+      <span class="options">
+        <select name="speed of visualization" id="menu" class="speed-menu">
+          <option value="0">Speed</option>
+          <option value="1">1.00x</option>
+          <option value="3">3.00x</option>
+          <option value="5">5.00x</option>
+          <option value="10">10.00x</option>
+          <option value="20">20.00x</option>
+        </select>
+      </span>
+      <a class="start">Sort</a>
+      <a class="icon"><i class="fa fa-bars"></i></a>
+    </div>
+  </div>
+  <div class="center">
+    <div class="array"></div>
+  </div>
+  <script src="./app.js"></script>
+  <script src="./helper.js"></script>
+  <script src="./sort-algorithms.js"></script>
+</body>
+
+</html>

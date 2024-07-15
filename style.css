@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+  --primary-color: darkblue;
+  --secondary-color: orange;
+}
+* {
+  /* Below is the standard CSS code one should add to get rid of default margins and padding which most of tge HTML elements have */
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  background-color: black;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+}
+.mar{
+  font-size: 1.2em;
+  font-weight: 900;
+}
+/* Title CSS */
+.title {
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 2em;
+  padding-block: 0.5em;
+  color: white;
+}
+
+/* Navbar CSS */
+.navbar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  font-size: 16px;
+  min-height: 70px;
+  padding-block: 0.6em;
+  background-color: var(--secondary-color);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.navbar1 a {
+  all: unset;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  background-color: white;
+}
+.navbar1 a:hover {
+  background-color: #dc0220;
+}
+.navbar1 #menu {
+  width: fit-content;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 8px;
+  background-color: rgb(3, 0, 0);
+  color: white;
+}
+.navbar1 > .icon {
+  display: none;
+}
+#menu,
+#random,
+#start {
+  cursor: pointer;
+}
+
+/* Center css */
+.center {
+  margin: auto;
+  /* background-color: #ebecf3; */
+  box-shadow: rgba(8, 73, 250, 0.936); /* Added shadow to make page border free */
+  height: 420px;
+  width: 410px;
+  max-height: 731px;
+}
+.array {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100%;
+  height: 100%;
+  padding: 1rem;
+  flex-direction: row;
+}
+.cell {
+  display: flex;
+  align-items: flex-start;
+  flex: 0.5;
+  width: 0.000001%;
+  margin: 1px;
+  background-color: #f70c91;
+  resize: horizontal;
+  position: relative;
+  transition: all 0.4s ease-in;
+  box-shadow: #5ed84d;
+}
+.cell.done {
+  background-color: #5ed84d;
+  border-color: #db1919;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.cell.visited {
+  border-color: red;
+  background-color: red;
+  color: white;
+  transition: 0.5s;
+}
+.cell.current {
+  border-color: yellow;
+  background-color: yellow;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.cell.min {
+  background-color: cyan;
+  border-color: cyan;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+
+/* Footer CSS */
+footer {
+  text-align: center;
+  font-size: 28px;
+  color: black;
+  padding: 1.6em;
+}
+.footer > p:nth-child(1) {
+  margin-bottom: 0.5em;
+}
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #334fff;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar1 {
+    gap: 0.4em;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .navbar1 *,
+  .navbar1 a {
+    font-size: 14px;
+  }
+  .footer {
+    font-size: 18px;
+  }
+  a#random {
+    order: 4;
+  }
+  a.start {
+    color: black;
+    order: 5;
+  }
+}
+@media screen and (max-width: 550px) {
+  .center {
+    width: 95%;
+  }
+}
